@@ -1,0 +1,67 @@
+ *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: #0BC836;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container-main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.titulo{
+    font-size: 32px;
+}
+.titulo, #top-op, #radio-button, #entrada, #saida, #botoes, footer{
+    margin: 18px 0;
+}
+#top-op, #radio-button, #botoes{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+#radio-button{
+    flex-direction: row;
+}
+#entrada, #saida{
+    width: 555px;
+    height: 265px;
+    border-radius: 10px;
+    border: 2px solid #0BC836;
+}
+#radio-button{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+}
+footer{
+    color: #0BC836;
+    font-size: 14px;
+    text-align: center;
+}
+
+#op, #button{
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    border-radius: 10px;
+    color: #0BC836;
+    border: 1px solid #323A4F;
+    background-color: white;
+}
+#op{
+    width: 250px;
+}
+#op:hover{
+    cursor: pointer;
+}
+#button:hover{
+    cursor: pointer;
+    color: white;
+    border: none;
+    background-color: #0BC836;
+}

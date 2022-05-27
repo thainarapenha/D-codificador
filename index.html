@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tp-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <title>D-Codificador</title>
+    </head>
+
+    <body>
+        <main class="container-main">
+            <section class="titulo">
+                <h1>D-codificador</h1>
+            </section>
+
+            <form>
+                <section id="top-op">
+                    <select id="op">
+                        <option value="valor1">-- Selecionar --</option>
+                        <option value="valor2">Base 64</option>
+                        <option value="valor3">Cifra de César</option>
+                    </select>
+    
+                    <div id="radio-button">
+                        <input type="radio" value="codificar"/>Codificar<br />
+                        <input type="radio" value="decodificar"/>Decodificar<br />
+                    </div>
+                </section>
+
+
+                <div class="caixa-texto">
+                    <textarea id="entrada" type="texto-usuario" rows="10"cols="33" placeholder="Escreva aqui sua mensagem"></textarea>
+                    <textarea id="saida" type="texto-usuario" rows="10"cols="33" placeholder="Aqui está sua mensagem"></textarea>
+                </div>
+
+                <div id="botoes">
+                    <button type="button" id="button">Codificar</button>
+                </div>
+            </form>
+
+            <footer>
+                <p>Desenvolvido por <strong>Thainara Penha</strong></p>
+            </footer>
+        </main>
+    </body>
+</html>
