@@ -19,7 +19,7 @@ body{
 .titulo, .top-op, .radio-button, #entrada, #saida, .botao, footer{
     margin: 18px 0;
 }
-.top-op, .radio-button, .botao{
+.top-op, .radio-button, .botao, .chave{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -45,7 +45,7 @@ footer{
     text-align: center;
 }
 
-.op, button{
+.op, #btnBotao{
     width: 150px;
     height: 40px;
     text-align: center;
@@ -58,7 +58,7 @@ footer{
     width: 250px;
     cursor: pointer;
 }
-#button:hover{
+#btnBotao:hover{
     cursor: pointer;
     color: white;
     border: none;
