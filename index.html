@@ -4,7 +4,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="index.css">
+        <script defer src="index.js"></script>
         <title>D-Codificador</title>
     </head>
 
@@ -15,27 +18,33 @@
             </section>
 
             <form>
-                <section id="top-op">
-                    <select id="op">
-                        <option value="valor1">-- Selecionar --</option>
-                        <option value="valor2">Base 64</option>
-                        <option value="valor3">Cifra de César</option>
+                <section class="top-op">
+                    <select class="op">
+                        <option value="selecionar">-- Selecionar --</option>
+                        <option value="base64">Base 64</option>
+                        <option value="cifraCesar">Cifra de César</option>
                     </select>
     
-                    <div id="radio-button">
-                        <input type="radio" value="codificar"/>Codificar<br />
-                        <input type="radio" value="decodificar"/>Decodificar<br />
+                    <div class="radio-button">
+                        <div class="radio">
+                            <input type="radio" name="opcao" id="codificar" value="codificar" checked />
+                            <label for="codificar">Codificar</label>
+                        </div>
+    
+                        <div class="radio">
+                            <input type="radio" name="opcao" id="decodificar" value="decodificar"/>
+                            <label for="decodificar">Decodificar</label>
+                        </div>
                     </div>
                 </section>
-
 
                 <div class="caixa-texto">
                     <textarea id="entrada" type="texto-usuario" rows="10"cols="33" placeholder="Escreva aqui sua mensagem"></textarea>
                     <textarea id="saida" type="texto-usuario" rows="10"cols="33" placeholder="Aqui está sua mensagem"></textarea>
                 </div>
 
-                <div id="botoes">
-                    <button type="button" id="button">Codificar</button>
+                <div class="botao">
+                    <button id="btnBotao">Codificar</button>
                 </div>
             </form>
 

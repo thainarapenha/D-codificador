@@ -4,6 +4,7 @@
 }
 body{
     color: #0BC836;
+    background: rgb(43, 43, 43);
     font-family: Arial, Helvetica, sans-serif;
 }
 .container-main{
@@ -15,16 +16,16 @@ body{
 .titulo{
     font-size: 32px;
 }
-.titulo, #top-op, #radio-button, #entrada, #saida, #botoes, footer{
+.titulo, .top-op, .radio-button, #entrada, #saida, .botao, footer{
     margin: 18px 0;
 }
-#top-op, #radio-button, #botoes{
+.top-op, .radio-button, .botao{
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
 }
-#radio-button{
+.radio-button{
     flex-direction: row;
 }
 #entrada, #saida{
@@ -33,7 +34,7 @@ body{
     border-radius: 10px;
     border: 2px solid #0BC836;
 }
-#radio-button{
+.radio-button{
     display: flex;
     width: 200px;
     justify-content: space-between;
@@ -44,7 +45,7 @@ footer{
     text-align: center;
 }
 
-#op, #button{
+.op, button{
     width: 150px;
     height: 40px;
     text-align: center;
@@ -53,10 +54,8 @@ footer{
     border: 1px solid #323A4F;
     background-color: white;
 }
-#op{
+.op{
     width: 250px;
-}
-#op:hover{
     cursor: pointer;
 }
 #button:hover{
