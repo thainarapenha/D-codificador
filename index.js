@@ -24,28 +24,44 @@ function base64(){
 function cifraCesar(){
     let msgCifra = document.querySelector("#entrada").value.toUpperCase();
     let chave = parseInt(document.querySelector("#rangenumber").value);
-    let resultado = '';
+    let txt = '';
+    let novoTxt = '';
 
     console.log(msgCifra)
 
     if(statusCodificar.checked){
         for(let i = 0; i < msgCifra.length; i++){
             if(msgCifra[i] === msgCifra[i]){
-                resultado = ((msgCifra.charCodeAt(i) + chave - 65) % 26 + 65)
+                txt = ((msgCifra.charCodeAt(i) + chave - 65) % 26 + 65)
+                novoTxt = novoTxt.concat(String.fromCharCode(txt));
             }else{
-                resultado = ((msgCifra.charCodeAt(i) + chave - 97) % 26 + 97)
+                txt = ((msgCifra.charCodeAt(i) + chave - 97) % 26 + 97)
+                novoTxt = novoTxt.concat(String.fromCharCode(txt));
             }
         }
-        document.querySelector("[id='saida']").value = resultado;
+        document.querySelector("[id='saida']").value = novoTxt;
+    }else if(statusDecodificar.checked){
+        for(let i = 0; i < msgCifra.length; i++){
+            if(msgCifra.charCodeAt(i) >= 97 && msgCifra.charCodeAt(i) <= 122){
+                txt = ((msgCifra.charCodeAt(i) - 97 -  chave + 26) % 26 + 97)
+                novoTxt = novoTxt.concat(String.fromCharCode(txt));
+            }else if(msgCifra.charCodeAt(i) >= 65 && msgCifra.charCodeAt(i) <= 90){
+                txt = ((msgCifra.charCodeAt(i) - 65 - chave + 26) % 26 + 65)
+                novoTxt = novoTxt.concat(String.fromCharCode(txt));
+            }else{
+                novoTxt = novoTxt.concat(String.fromCharCode(txt));
+            }
+        }
     }
+    document.querySelector("[id='saida']").value = novoTxt;
 }
 
 //altera a visibilidade da escolha de chave para a cifra de César
 cxSelecao.addEventListener("click", function(){
-    if(cxSelecao.value === "cifraCesar"){
-        verChave.style.display = "block";
-    }else{
+    if(cxSelecao.value != "cifraCesar"){
         verChave.style.display = "none";
+    }else{
+        verChave.style.display = "block";
     }
 });
 
